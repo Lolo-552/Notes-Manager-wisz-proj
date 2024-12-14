@@ -1,0 +1,155 @@
+html {
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: rgb(88,98,87);
+    background: linear-gradient(180deg, rgba(88,98,87,1) 0%, rgba(70,78,70,1) 60%, rgba(39,45,40,1) 100%);
+}
+
+.page-content {
+    background: rgb(252,232,187);
+    background: linear-gradient(180deg, rgba(252,232,187,1) 0%, rgba(201,178,138,1) 80%, rgba(96,77,55,1) 100%);
+    box-shadow: 8px 8px 27px 0px rgba(0, 0, 0, 1);
+    min-height: calc(100vh - 90px);
+}
+
+.white-background {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0;
+    margin-bottom: 30px;
+    box-shadow: 8px 8px 24px -5px rgba(0, 0, 0, 1);
+}
+
+.pencil-container::after {
+    content: "";
+    display: none;
+    width: 40px;
+    height: 550px;
+    margin: 0;
+    background-image: url("../img/pencil.png");
+    position: absolute;
+    top: 0;
+    right: -43px;
+}
+
+.action-button-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .action-button-list a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        background: #D0A153;
+        width: 70%;
+        text-align: center;
+        margin: 30px auto;
+        padding: 13px 20px;
+        border-radius: 20px;
+        box-shadow: 7px 5px 28px -1px rgba(112, 73, 15, 1);
+    }
+
+.action-button {
+    background: #5D4531;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: fit-content;
+}
+.action-button:hover {
+     color: white;
+}
+
+.note {
+    width: 229px;
+    height: 188px;
+    background: url("../img/box.png");
+    background-size: cover;
+    padding: 40px 20px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+    .note a {
+        color: #fff;
+    }
+
+    .note p {
+        margin: 0;
+    }
+
+.nav-link{
+    color: black;
+}
+.nav-pills .nav-link.active {
+    background-color: rgb(88,98,87);
+}
+.nav-pills .nav-link:hover {
+    background-color: rgb(88,98,87);
+    color: white;
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .page-content {
+        border-radius: 30px;
+        margin: 30px auto;
+        padding: 15px 70px;
+    }
+
+    .pencil-container::after {
+        display: block;
+    }
+
+    .pencil-container {
+        position: relative;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    ...
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+    ...
+}

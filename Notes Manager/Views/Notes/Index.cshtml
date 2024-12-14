@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Notes_Manager.Models.Notes>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Twoje Notatki</h1>
+<div class="d-flex justify-content-between">
+    <div>
+        <a asp-action="Create" class="action-button">Dodaj</a>
+        <a asp-controller="Home" asp-action="Index" class="action-button">Wstecz</a>
+    </div>
+    <form class="d-inline">
+        <input placeholder="Wyszukiwarka" class="form-control w-auto d-inline" type="text" name="SearchString" />
+        <input class="action-button" type="submit" value="Szukaj" />
+
+        <select class="form-control w-auto d-inline" name="Category" asp-items="ViewBag.CategoryName" onchange="this.form.submit()">
+            <option disabled selected hidden>Kategorie</option>
+            <option>Wszystkie</option>
+        </select>
+    </form>
+</div>
+<div class="d-flex flex-wrap justify-content-center gap-3">
+    @foreach (var item in Model)
+    {
+
+        <div class="note">
+            <div style="position: absolute; top: 4px; right: 10px;">
+                <p class="btn-sm btn-light" style="width: fit-content; display: inline-block;">@Html.DisplayFor(modelItem => item.Category.Name)</p>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn-sm btn-dark">Edytuj</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn-sm btn-danger">Usuń</a>
+            </div>
+            <a asp-action="Details" asp-route-id="@item.Id">
+                <p>@Html.DisplayFor(modelItem => item.Title)</p>
+            </a>
+        </div>
+    }
+</div>

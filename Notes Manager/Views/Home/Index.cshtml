@@ -1,0 +1,47 @@
+﻿@model Notes_Manager.Models.ApplicationUser
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-12 col-md-4">
+        <h1>Manager Notatek</h1>
+        <p>Aplikacja do zarządzania notatkami to narzędzie, które umożliwia tworzenie, edytowanie i przechowywanie notatek w jednym miejscu. Dzięki niej możesz szybko i łatwo zapisywać ważne informacje oraz uporządkować je według własnych potrzeb. Aplikacja posiada prosty interfejs, dzięki czemu jej obsługa jest intuicyjna i łatwa. Aplikacja umożliwia również tworzenie kategorii, co pozwala na lepsze uporządkowanie notatek. Dzięki wyszukiwarce szybko znajdziesz interesującą Cię notatkę, niezależnie od tego, ile ich posiadasz.</p>
+        <ul class="action-button-list">
+            <li><a asp-controller="Notes" asp-action="Create">Utwórz</a></li>
+            <li><a asp-controller="Notes" asp-action="Index">Przeglądaj</a></li>
+            <li><a asp-controller="Categories" asp-action="Index" style="background: #516456;">Kategorie</a></li>
+            <li><a asp-area="Identity" asp-page="/Account/Manage/Index"  style="background: #5D4531;">Konto</a></li>
+        </ul>
+    </div>
+    <div class="col-12 col-md-8 pencil-container">
+        <div class="white-background">
+            <div class="row">
+                <div class="d-inline-block">
+                    <img class="d-none d-lg-block float-end" src="~/img/book.png" alt="" style=" width: 300px; padding-left: 20px; " />
+                    <span>
+                        <h2 class="d-inline-block">Kategorie</h2>
+                        <p>
+                            Kategorie w aplikacji do zarządzania notatkami pozwalają na lepsze uporządkowanie notatek według własnych potrzeb. Możesz tworzyć odrębne kategorie dla różnych dziedzin wiedzy lub według innych kryteriów, np. według projektów, klientów lub zadań do wykonania. Aplikacja umożliwia dodawanie nowych kategorii w prosty sposób oraz edytowanie lub usuwanie istniejących kategorii.
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2>Wyszukiwarka</h2>
+                    <p>Aplikacja do zarządzania notatkami umożliwia wyszukiwanie notatek, dzięki czemu możesz znaleźć swoją notatke na podstawie wyrazów zawartych w tytule lub kategorii</p>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2>Przeglądaj</h2>
+                    <p>Aplikacja do zarządzania notatkami umożliwia przeglądanie notatek w prosty sposób. Możesz przeglądać wszystkie swoje notatki lub posortować je według kategorii. W aplikacji znajduje się także wyszukiwarka, która pozwala na szybkie znalezienie interesującej Cię notatki, niezależnie od tego, ile ich posiadasz.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row white-background">
+            <h2>Twórcy</h2>
+            <p>Aplikacja do zarządzania notatkami została stworzona przez studentów Wyższej Szkoły Informatyki i Zarządzania w Rzeszowie na potrzeby przedmiotu Projekt Zespołowy</p>
+        </div>
+    </div>
+</div>
+
+

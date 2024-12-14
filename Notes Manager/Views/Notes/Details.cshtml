@@ -1,0 +1,20 @@
+﻿@model Notes_Manager.Models.Notes
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Html.DisplayFor(model => model.Title)</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="action-button">Edytuj</a>
+    <a asp-action="Index" class="action-button">Wstecz</a>
+</div>

@@ -1,0 +1,23 @@
+﻿a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+    color: #0077cc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+}
+
+.identity-link {
+    border: solid 1px #000000;
+}
+.identity-link {
+    border: solid 1px #626262;
+    border-radius: 20px;
+    margin-left: 10px;
+}
